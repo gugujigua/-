@@ -1,0 +1,62 @@
+<%- include header.html%>
+    <link rel="stylesheet" href="/public/client/css/second.css">
+    <!-- 首页网页内容开始 -->
+    <div class="-ruing">
+        <div class="-ruing1"><span>“如果你的地中海之梦是风和日丽的天气和古城墙下宝石蓝般的海水，那么克罗地亚将是让你梦想成真的地方。”</span></div>
+        <div class="-ruing2"><span>– 引自权威旅游指南《 Lonely Planet》</span></div>
+    </div>
+    <div class="-cent-1">
+        <div class="ct-left">
+            <img src="/public/client/img/01.jpg" alt="">
+        </div>
+        <div class="ct-right">
+            <div class="td-1"><span>克罗地亚中国旅行社</span> - 克罗地亚及周边巴尔干国家最用心的地接社</div>
+            <div class="td-2">克罗地亚中国旅行社(Kineska Putovanja d.o.o.)
+                位于克罗地亚首都萨格勒布，是一家经克罗地亚国家旅游局认证并备案的旅游机构，具备与中国出境社合作资质，可提供团队ADS签证邀请函以及各类商务邀请函。主要服务国家包括克罗地亚、斯洛文尼亚、波黑、黑山、塞尔维亚及周边巴尔干国家。做为本土旅行社，我们拥有良好的目的地资源，可根据客户需求提供高品质的旅游度假、文化交流、商业合作等服务。
+            </div>
+        </div>
+    </div>
+    <div class="-cent-2">
+        <div class="ct2-left">
+            <div class="-jack">资讯 News&Info
+                <div class="-riqi"><a href="/news">+ 更多</a></div>
+            </div>
+            <%for(var i in news){%>
+            <div class="-item">
+                <a href="/news/<%=news[i].id%>"><%=news[i].title%></a>
+                <div class="-riqi2"><%=news[i].create_time%></div>
+            </div>
+            <%}%>
+        </div>
+        <div class="ct2-right">
+            <img src="/public/client/img/02.jpg" alt="">
+        </div>
+    </div>
+    <div class="sy-bottom">
+        <%for(var i in croatia){%>
+            <%if(i==1){%>
+                <div class="-back2">
+                    <div class="-yuan"><a href="/croatia/<%=croatia[i].id%>"><img src="<%=croatia[i].image%>" alt="<%=croatia[i].title%>"></a>
+                    </div>
+                    <div class="-go"><a href="/croatia/<%=croatia[i].id%>">普利特维采湖</a></div>
+                    <div class="-over">
+                        <%=croatia[i].description%>
+                    </div>
+                </div>
+                <%}else{%>
+                    <div class="-back">
+                        <div class="-let"><a href="/croatia/<%=croatia[i].id%>"><img src="<%=croatia[i].image%>" alt="<%=croatia[i].title%>"></a>
+                        </div>
+                        <div class="-go"><a href="/croatia/<%=croatia[i].id%>">
+                                <%=croatia[i].title%>
+                            </a></div>
+                        <div class="-over">
+                            <%=croatia[i].description%>
+                        </div>
+                    </div>
+                    <%}%>
+                        <%}%>
+    </div>
+    <!-- 首页内容内容结束 -->
+
+    <%-include footer.html%>

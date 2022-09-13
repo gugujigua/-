@@ -1,0 +1,33 @@
+<%-include head.html%>
+<link rel="stylesheet" href="/public/client/css/about.css">
+    <!-- <div class="about-banner">
+        <img src="../img/about_1.jpg" alt="">
+    </div> -->
+    <div class="about-main">
+        <div class="main-title">
+            <div class="hr-left"></div>
+            <div class="title">
+                <span class="title-cn">关于我们</span>
+                <span class="title-en">About Us</span>
+            </div>
+            <div class="hr-right"></div>
+        </div>
+        <div class="about-article">
+            <div class="article-left">
+                <%- about.content%>
+            </div>
+            <div class="article-right">
+                <div class="right-image">
+                    <img src="<%= about.image%>" alt="">
+                </div>
+                <div class="right-text1">
+                    <%= about.description_one%>
+                </div>
+                <div class="right-text2">
+                    <%= about.description_two%>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%-include foot.html%>

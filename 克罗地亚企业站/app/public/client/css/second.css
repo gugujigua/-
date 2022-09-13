@@ -1,0 +1,348 @@
+/* 顶部 */
+.swiper {
+    width: 100%;
+    height: 300px;
+    /* background-color: red; */
+    position: relative;
+  }
+  header {
+    width: 100%;
+    height: 98px;
+    display: flex;
+  
+    /* background-color: yellow; */
+  }
+  .wf {
+    width: 1024px;
+    height: 98px;
+    margin: 0 auto;
+    /* background-color: red; */
+    display: flex;
+  }
+  .wf-td {
+    width: 339.17px;
+    height: 98px;
+    /* background-color: green; */
+    display: flex;
+  }
+  .swiper .swiper-button-hidden{ opacity : 0; }
+  .nav {
+    width: 684.83px;
+    /* background-color: gold; */
+    height: 98px;
+  }
+  .nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8d9095;
+    color: white;
+  
+  }
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    background-color: #8d9095;
+    border-radius: 50%;
+    color: white;
+  
+  }
+  
+  .nav ul li {
+    height: 98px;
+    /* background-color: red; */
+    width: auto;
+    font: 14px;
+    word-spacing: normal;
+    color: #8d9095;
+    font-family: "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font: normal 600 15px / 23px "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+    line-height: 98px;
+  }
+  
+  .wf-td img {
+    width: 277px;
+    height: 52px;
+    margin: 20px auto;
+  }
+  /* 顶部+轮播图结束 */
+  footer {
+    width: 100%;
+    height: 224px;
+    background: #00497b none repeat center top;
+  }
+  .footmid {
+    width: 1024px;
+    height: 199px;
+  
+    margin: 0 auto;
+  }
+  .mid {
+    width: 1024px;
+    height: 161px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .fot {
+    height: 161px;
+    width: 311px;
+    font: 14px;
+    word-spacing: normal;
+    color: #8d9095;
+    font-family: "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+  }
+  .bottom {
+    width: 1024px;
+    height: 28px;
+  
+    text-align: center;
+    line-height: 28px;
+  }
+  .fot li {
+    height: 32px;
+    color: #b0b0b0;
+  }
+  .first {
+    font: 16px;
+    word-spacing: normal;
+    color: #8d9095;
+    font-family: "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .swiper{
+    --swiper-theme-color: #ff6600;/* 设置Swiper风格 */
+    --swiper-navigation-color: #00ff33;/* 单独设置按钮颜色 */
+    --swiper-navigation-size: 20px;/* 设置按钮大小 */
+  }
+/* 公共部分结束 */
+
+/* 克罗地亚开始 */
+.-tp {
+    width: 1024px;
+    height: 48px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.-tpzuo {
+    width: 353px;
+    height: 30px;
+    border-bottom: 1px solid black;
+    float: left;
+}
+
+.-center {
+    width: 279px;
+    height: 48px;
+    float: left;
+    margin: 0 auto;
+}
+
+.-tpyou {
+    width: 392px;
+    height: 30px;
+    border-bottom: 1px solid black;
+    float: right;
+}
+
+.ce-1 {
+    width: 208px;
+    height: 28px;
+    margin: 0 auto;
+    color: #ff0033;
+    font-size: 22px;
+    text-align: center;
+    line-height: 28px;
+}
+
+.ce-2 {
+    width: 246px;
+    height: 20px;
+    margin: 0 auto;
+    color: #808080;
+    font-size: 18px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.sy-bottom {
+    width: 1024px;
+    height: 431px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.-back {
+    width: 248px;
+    height: 431px;
+    float: left;
+    margin-left: 6px;
+}
+
+.-let {
+    width: 228px;
+    height: 228px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.-let img {
+    width: 228px;
+    height: 228px;
+}
+
+.-let img:hover {
+    transform: scale(1.4);
+    transition: all 1s;
+}
+
+.-go {
+    width: 228px;
+    height: 24px;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: #00497b;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.-go a {
+    color: #00497b;
+}
+
+.-over {
+    width: 228px;
+    height: 128px;
+    margin: 0 auto;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #3e3e3e;
+    line-height: 1.5em;
+}
+
+.-back2 {
+    width: 248px;
+    height: 431px;
+    float: left;
+    margin-left: 6px;
+}
+
+.-yuan {
+    width: 228px;
+    height: 228px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.-yuan img {
+    display: block;
+    width: 228px;
+    height: 228px;
+    border-radius: 50%;
+}
+
+.-yuan img:hover {
+    transform: scale(1.4);
+    transition: all 1s;
+}
+
+/* 地图部分 */
+.big-box {
+    width: 974px;
+    height: 470px;
+    margin: 0 auto;
+    background-image: url(/public/client/img/map.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.-font {
+    width: 974px;
+    height: 23px;
+    float: left;
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 23px;
+    color: #ff0033;
+}
+.-font1 {
+    width: 974px;
+    height: 24px;
+    float: left;
+    font-size: 18px;
+    text-align: center;
+    line-height: 24px;
+    color: #808080;
+}
+.-smallbox{
+    width: 909px;
+    height: 223px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 30px; 
+    font-size: 14px;
+    color: #3e3e3e;
+    line-height: 2em;
+}
+/* 地图部分结束 */
+.-bush{
+    width: 1024px;
+    height: 1671px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.-mash{
+    width: 318px;
+    height: 318px;
+    position: relative;
+}
+.-mash img{
+    width: 318px;
+    height: 318px;
+      -webkit-filter: grayscale(90%); /* Chrome, Safari, Opera */  
+      filter: grayscale(90%);  
+}
+.-mash:hover{ cursor:pointer;}  
+.-mash:hover img{  
+    -webkit-filter: grayscale(0);  
+    -moz-filter: grayscale(0);  
+    -ms-filter: grayscale(0);  
+    -o-filter: grayscale(0);  
+    filter: grayscale(0);  
+    filter: gray;  
+}  
+.-tupian15{
+    width: 100%;
+    height: 39px;
+    background-color: rgba(0, 0, 0, 0.501);
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 39px;
+}
+.-diduan{
+    width: 1024px;
+    height: 687px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/* 克罗地亚结束 */

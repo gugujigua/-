@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/admin/layui-v2.6.8/layui/css/layui.css">
+    <link rel="stylesheet" href="/public/admin/wangEditor/style.css">
+    <link rel="stylesheet" href="/public/admin/css/common.css">
+    <link rel="stylesheet" href="/public/admin/css/add-wheel.css">
+    <link rel="stylesheet" href="/public/admin/layui-theme-custom.css">
+</head>
+
+<body>
+    <div class="layui-panel">
+        <h2>编辑</h2>
+        <a href="/admin/cateCroatia" class="layui-btn" style="margin:10px">返回</a>
+        <div class="from-box">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">类别</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="cat_id" value="<%=data.cat_id%>" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" placeholder="请输入标题" class="layui-input" value="<%=data.title%>">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">英文标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="en_title" value="<%=data.en_title%>" placeholder="请输入标题" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="add-wheelSub">立即提交</button>
+                    </div>
+                </div>
+            </form>
+            <script src="/public/admin/layui-v2.6.8/layui/layui.js"></script>
+            <script src="/public/admin/wangEditor/index.js"></script>
+            <script>
+                layui.use('form', function () {
+                    var form = layui.form;
+                    var $ = layui.$
+                    var upload = layui.upload
+                    form.on('submit(add-wheelSub)', function (data) {
+                        $.ajax({
+                            url: '/admin/edit-cateCroatia/'+'<%=data.id%>',
+                            type: 'POST',
+                            data: data.field,
+                            success: function (res) {
+                                if (res.code == 200) {
+                                    layer.msg(res.msg)
+                                    setTimeout(() => {
+                                        location.href = '/admin/cateCroatia'
+                                    }, 2000);
+                                }
+                            },
+                            error: function () {
+                                layer.msg('编辑出错啦！请稍后重试')
+                            }
+                        })
+                        return false;
+                    })
+                });
+
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

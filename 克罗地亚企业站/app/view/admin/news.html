@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/public/admin/layui-v2.6.8/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/public/admin/layui-theme-custom.css">
+</head>
+
+<body>
+    <div class="layui-panel">
+        <a href="/admin/add-news" class="layui-btn">添加</a>
+        <table id="banner" lay-filter="test"></table>
+    </div>
+    <script type="text/html" id="banner-table">
+        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-xs" lay-event="del">删除</a>
+      </script>
+    <script src="/public/admin/layui-v2.6.8/layui/layui.js"></script>
+    <script>
+        layui.use('table', function () {
+            var table = layui.table;
+            var $ = layui.$
+            var util = layui.util
+            //第一个实例
+            table.render({
+                elem: '#banner'
+                , url: '/admin/news-data' //数据接口
+                , page: true //开启分页
+                , cols: [[ //表头
+                    { field: 'id', title: 'ID', width: 80, fixed: 'left' }
+                    , { field: 'title', title: '标题', width: 200 }
+                    , {
+                        field: 'image', title: '图片', width: 300,
+                        templet: '<div><img src="{{d.image}}"></div>'
+                    }
+                    , { field: 'description', title: '描述', width: 200 }
+                    , {
+                        field: 'create_time', title: '发布时间', width: 200,
+                        templet: function (d) {
+                            return util.toDateString(d.create_time,'yyyy-MM-dd')
+                        }
+                    }
+                    , { title: '操作', toolbar: '#banner-table' }
+                ]],
+                limit: 4,
+                limits: [2,4, 8,10, 15, 20, 25],
+                response: {
+                    statusCode: 200,
+                    countName: 'total'
+                }
+            });
+            //工具条事件
+            table.on('tool(test)', function (obj) {
+                var data = obj.data;
+                if (obj.event === 'detail') {
+                    layer.msg('ID：' + data.id + ' 的查看操作');
+                } else if (obj.event === 'del') {
+                    layer.confirm('真的删除行么', function (index) {
+                        $.ajax({
+                            url: '/admin/delete-news/' + data.id,
+                            type: 'post',
+                            data: data.field,
+                            success: function (res) {
+                                if (res.code == 200) {
+                                    layer.msg(res.msg)
+                                }
+                            },
+                            error: function () {
+                                layer.msg('删除出错')
+                            }
+                        })
+                        obj.del();
+                        layer.close(index);
+                    });
+                } else if (obj.event === 'edit') {
+                    // layer.alert('编辑行：<br>' + JSON.stringify(data))
+                    location.href = '/admin/edit-news/' + data.id
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

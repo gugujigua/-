@@ -1,0 +1,76 @@
+.swiper {
+    width: 1024px;
+    height: 350px;
+    /* background-color: red; */
+    position: relative;
+}
+
+main {
+    width: 1024px;
+    height: auto;
+    margin: 0 auto 60px;
+}
+span{
+    display: block;
+}
+main .main-title {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+main .main-title span {
+    display: block;
+    float: left;
+    font-size: 22px;
+    color: #ff0033;
+    font-family: "微软雅黑";
+    line-height: 1.5em;
+}
+main .main-title .title-en{
+    font-size: 18px;
+    color: #808080;
+    line-height: 1.5em;
+    font-family:"times new roman,times,serif";
+}
+main .main-jieshao{
+    width: 100%;
+    height: auto;
+}
+main .main-jieshao .bytitle{
+    font-size: 15px;
+    color: #3e3e3e;
+    font-family: "微软雅黑";
+    font-weight: 700;
+}
+main .main-jieshao p{
+    margin-top: 25px;
+    font-size: 15px;
+    color: #3e3e3e;
+    font-family: "微软雅黑";
+    line-height: 1.5em;
+}
+main .main-jieshao img{
+    width: 1024px;
+    margin-top: 24px;
+}
+main .main-jieshao .liangdian{
+    display: block;
+    height: 98px;
+    font-size: 15px;
+    color: #3e3e3e;
+    font-family: "微软雅黑";
+}
+main .main-jieshao .day{
+    margin-top: 24px;
+    font-size: 14px;
+    color: #3e3e3e;
+    font-family: "微软雅黑";
+    font-weight: 700;
+}
+main .main-jieshao .text{
+    font-size: 14px;
+    color: #3e3e3e;
+    font-family: "微软雅黑";
+    line-height: 1.5em;
+}

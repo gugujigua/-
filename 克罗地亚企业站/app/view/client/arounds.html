@@ -1,0 +1,151 @@
+<%-include header.html%>
+<link rel="stylesheet" href="/public/client/css/arounds.css">
+   
+<div class="-gaikuo">
+    <div class="-gaikuo1">
+        <div class="-gaikuoshang">
+            <div class="-gaikuosha">
+                <div class="ba">巴尔干地区概况</div>
+                <div class="yin">About Balkan</div>
+            </div>
+            <div class="-zhong">- 多民族，多宗教，多元文化的万花筒</div>
+        </div>
+        <div class="-gaikuodi">
+            巴尔干是欧洲大陆南部三大半岛之一，自古就是一个多民族多信仰的地区。天主教、东正教、伊斯兰教在这一地区共存。不同的宗教主导不同的文化，因此巴尔干相对欧洲其它地区非常有其独特的风情。我们重点介绍的是克罗地亚周边的从前南斯拉夫独立出来的几个巴尔干国家。
+        </div>
+    </div>
+</div>
+<div class="-si">
+    <%for(var i in around){%>
+        <%if(i==0){%>
+    <div class="-s">
+        <div class="-si1"><%=around[i].title%></div>
+        <div class="-si2"><%=around[i].en_title%></div>
+    </div>
+    <div class="-si3">
+        <%=around[i].description%>
+    </div>
+    <%}%>
+<%}%>
+</div>
+
+<div class="-situ">
+    <div class="-sleif">
+        <%for(var i in data){%>
+            
+            <%if(i!=data.length-1){%>
+        <div class="-situleft">
+            <a href="/arounds/<%=data[i].id%>"><img src="<%=data[i].image%>" alt=""></a>
+            <div class="-touming"><%=data[i].headline%></div>
+        </div>
+        <%}else{%>
+    </div>
+    <div class="-situright">
+        <a href="/arounds/<%=data[i].id%>"><img src="<%=data[i].image%>" alt=""></a>
+        <div class="-touming"><%=data[i].headline%></div>
+    </div>
+    <%}%>
+    <%}%>
+</div>
+
+<div class="-sai">
+    <%for(var i in around){%>  
+        <%if(i==5){%>
+    <div class="-s">
+        <div class="-si1"><%=around[i].title%></div>
+        <div class="-si2"><%=around[i].en_title%></div>
+    </div>
+    <div class="-si3">
+        <%=around[i].description%>
+    </div>
+    <%}%>
+    <%}%>
+</div>
+
+<div class="-saitu">
+    <%for(var i in date){%>
+    <div class="-saitu1">
+        <a href="/arounds/<%=date[i].id%>"><img src="<%=date[i].image%>" alt=""></a>
+        <div class="-touming"><%=date[i].headline%></div>
+    </div>
+    <%}%>
+</div>
+
+<div class="-sai">
+    <%for(var i in around){%>
+        <%if(i==8){%>
+    <div class="-s">
+        <div class="-si1"><%=around[i].title%></div>
+        <div class="-si2"><%=around[i].en_title%></div>
+    </div>
+    <div class="-si3">
+        <%=around[i].description%>
+    </div>
+    <%}%>
+    <%}%>
+</div>
+
+<div class="-saitu">
+    <%for(var i in cate){%>
+        <%if(i==0){%>
+    <div class="-saitu1">
+        <a href="/arounds/<%=cate[i].id%>"><img src="<%=cate[i].image%>" alt=""></a>
+        <div class="-touming"><%=cate[i].headline%></div>
+    </div>
+    <%}else{%>
+        <div class="-saitu2">
+            <a href="/arounds/<%=cate[i].id%>"><img src="<%=cate[i].image%>" alt=""></a>
+            <div class="-touming"><%=cate[i].headline%></div>
+        </div>
+        <%}%>
+        <%}%>
+</div>
+<div class="-sai">
+    <%for(var i in around){%>  
+        <%if(i==10){%>
+    <div class="-s">
+        <div class="-si1"><%=around[i].title%></div>
+        <div class="-si2"><%=around[i].en_title%></div>
+    </div>
+    <div class="-si3">
+        <%=around[i].description%>
+    </div>
+    <%}%>
+    <%}%>
+</div>
+
+<div class="-saituzui">
+    <%for(var i in black){%>
+        <%if(i==0){%>
+    <div class="-saitu2">
+        <a href="/arounds/<%=black[i].id%>"><img src="<%=black[i].image%>" alt=""></a>
+        <div class="-touming"><%=black[i].headline%></div>
+    </div>
+    <%}else if(i==1){%>
+    <div class="-saitu1">
+        <a href="/arounds/<%=black[i].id%>"><img src="<%=black[i].image%>" alt=""></a>
+        <div class="-touming"><%=black[i].headline%></div>
+    </div>
+    <%}else if(i==2){%>
+        <div class="-saitu1">
+            <a href="/arounds/<%=black[i].id%>"><img src="<%=black[i].image%>" alt=""></a>
+            <div class="-touming"><%=black[i].headline%></div>
+        </div>
+    <%}else if(i==3){%>
+        <div class="-saitu2">
+            <a href="/arounds/<%=black[i].id%>"><img src="<%=black[i].image%>" alt=""></a>
+            <div class="-touming"><%=black[i].headline%></div>
+        </div>
+    <%}else{%>
+        <div class="-saitu3">
+            <a href="/arounds/<%=black[i].id%>"><img src="<%=black[i].image%>" alt=""></a>
+            <div class="-touming"><%=black[i].headline%></div>
+        </div>
+    <%}%>
+    <%}%>
+</div>
+<!-- 中间部分结束 -->
+
+
+
+<%-include footer.html%>

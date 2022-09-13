@@ -1,0 +1,161 @@
+.banner-img{
+    width: 100%;
+    height: 450px;
+}
+.banner-img img{
+    width: 100%;
+}
+main{
+    width: 1024px;
+    height: auto;
+    margin: 0 auto;
+}
+.main-title{
+    width: 984px;
+    height: 81px;
+    padding: 0 20px;
+}
+.main-title div{
+    float: left;
+}
+.main-title .hr-left{
+    width: 318px;
+    height: 31px;
+    margin: 0 5px;
+    border-bottom: 1px solid rgb(171, 171, 171);
+}
+.main-title .title{
+    width: 318px;
+    height: 48px;
+    padding: 0 5px;
+    text-align: center;
+}
+.main-title .title-cn{
+    font-family: "微软雅黑";
+    font-size: 36px;
+    color: #f0443a;
+    margin: 0 auto;
+}
+.main-title .title-en{
+    font-family:times new roman,times,serif;
+    font-size: 18px;
+    color: #A9A9A9;;
+    margin: 0 auto;
+}
+.main-title .hr-right{
+    width: 318px;
+    height: 31px;
+    margin: 0 5px;
+    border-bottom: 1px solid rgb(171, 171, 171);
+}
+main .jieshao{
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+}
+main p{
+    color: rgb(102, 102, 102);
+    font-size: 15px;
+    line-height: 68px;
+    padding: 0 5px;
+}
+main .gonglue{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+main .gonglue .gonglue-item1{
+    width: 472px;
+    height: 280px;
+    backgroundr: black;
+    background: url(../img/item1.jpg);
+    background-size: auto;
+    padding: 20px 0;
+    text-align: center;
+    float: left;
+    margin:20px;
+    position: relative;
+}
+main .gonglue .gonglue-item2{
+    width: 472px;
+    height: auto;
+    background-image: url(../img/item2.jpg);
+    background-size: auto;
+    padding: 110px 0;
+    text-align: center;
+    float: left;
+    margin: 20px;
+}
+main .gonglue .gonglue-item3{
+    width: 472px;
+    height: auto;
+    background-image: url(../img/item3.jpg);
+    background-size: auto;
+    padding: 110px 0;
+    text-align: center;
+    float: left;
+    margin: 20px;
+}
+main .gonglue .gonglue-item4{
+    width: 472px;
+    height: auto;
+    background-image: url(../img/item4.jpg);
+    background-size: auto;
+    padding: 110px 0;
+    text-align: center;
+    float: left;
+    margin: 20px;
+}
+main .gonglue .gonglue-item5{
+    width: 472px;
+    height: auto;
+    background-image: url(../img/item5.jpg);
+    background-size: auto;
+    padding: 110px 0;
+    text-align: center;
+    float: left;
+    margin: 20px;
+}
+main .gonglue .gonglue-item6{
+    width: 472px;
+    height: auto;
+    background-image: url(../img/item6.jpg);
+    background-size: auto;
+    padding: 110px 0;
+    text-align: center;
+    float: left;
+    margin: 20px;
+}
+.gonglue-item1 img{
+    width: 100%;
+    height: 100%;
+}
+main .gonglue a:hover span{
+    
+    color: goldenrod;
+    transition: 1s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+main .gonglue a:hover strong{
+    color: goldenrod;
+    transition: 1s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,70%);
+}
+.gonglue span{
+    width: 100%;
+    font-size: 22px;
+    color: #fff;
+    font-family: arial
+}
+.gonglue strong{
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    font-family: "微软雅黑"
+}

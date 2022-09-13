@@ -1,0 +1,406 @@
+/* 顶部 */
+.swiper {
+  width: 100%;
+  height: 300px;
+  /* background-color: red; */
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 98px;
+  display: flex;
+
+  /* background-color: yellow; */
+}
+
+.act {
+  color: #00497b;
+}
+
+header a {
+  color: #8d9095;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+
+.wf {
+  width: 1024px;
+  height: 98px;
+  margin: 0 auto;
+  /* background-color: red; */
+  display: flex;
+}
+
+.wf-td {
+  width: 339.17px;
+  height: 98px;
+  /* background-color: green; */
+  display: flex;
+}
+
+.swiper .swiper-button-hidden {
+  opacity: 0;
+}
+
+.nav {
+  width: 684.83px;
+  /* background-color: gold; */
+  height: 98px;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #8d9095;
+  color: white;
+
+}
+
+.swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-color: #8d9095;
+  border-radius: 50%;
+  color: white;
+
+}
+
+.nav ul li {
+  height: 98px;
+  /* background-color: red; */
+  width: auto;
+  font: 14px;
+  word-spacing: normal;
+  color: #8d9095;
+  font-family: "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font: normal 600 15px / 23px "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+  line-height: 98px;
+}
+
+.wf-td img {
+  width: 277px;
+  height: 52px;
+  margin: 20px auto;
+}
+
+/* 顶部+轮播图结束 */
+footer {
+  width: 100%;
+  height: 224px;
+  background: #00497b none repeat center top;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.footmid {
+  width: 1024px;
+  height: 199px;
+  margin: 0 auto;
+}
+
+.footmid ul {
+  /* background-color: red; */
+  width: 1024px;
+  height: 161px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.footmid ul li {
+  width: 330px;
+  height: 124px;
+  /* background-color: #00ff33; */
+  padding: 10px;
+  box-sizing: border-box;
+  float: left;
+}
+
+
+.footmid ul li span:first-child {
+  font-size: 16px;
+  color: #b0b0b0;
+  font-family: "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.footmid ul li .mid-bot {
+  height: 83.2px;
+  padding-top: 5px;
+}
+.footmid ul li .mid-bot span{
+  color: #b0b0b0;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.footmid .bottom {
+  width: 1024px;
+  height: 28px;
+  color: #8d9095;
+  font-size: 12px;
+  text-align: center;
+  line-height: 28px;
+  margin: auto;
+}
+
+
+
+
+
+.swiper {
+  --swiper-theme-color: #ff6600;
+  /* 设置Swiper风格 */
+  --swiper-navigation-color: #00ff33;
+  /* 单独设置按钮颜色 */
+  --swiper-navigation-size: 20px;
+  /* 设置按钮大小 */
+}
+
+/* 首页内容开始 */
+.-ruing {
+  width: 984px;
+  height: 102px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.-ruing1 {
+  width: 974px;
+  height: 70px;
+  font-size: 24px;
+  color: #00497b;
+}
+
+.-ruing2 {
+  width: 974px;
+  height: 32px;
+}
+
+.-ruing2 span {
+  width: 287px;
+  height: 21px;
+  float: right;
+  font-size: 16px;
+  color: #00497b;
+}
+
+.-cent-1 {
+  width: 1024px;
+  height: 248px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.ct-left {
+  width: 274px;
+  height: 206px;
+  float: left;
+}
+
+.ct-left img {
+  width: 274px;
+  height: 206px;
+}
+
+.ct-right {
+  width: 688px;
+  height: 195px;
+  float: left;
+}
+
+.td-1 {
+  width: 625px;
+  height: 34px;
+  font-size: 16px;
+  margin-left: 37px;
+  color: #00497b;
+}
+
+.td-1 span {
+  color: #b48630;
+}
+
+.td-2 {
+  width: 658px;
+  height: 124px;
+  margin-top: 24px;
+  font-size: 15px;
+  color: #3e3e3e;
+  margin-left: 37px;
+  line-height: 1.5em;
+}
+
+.-cent-2 {
+  width: 1024px;
+  height: 224px;
+  margin: 0 auto;
+}
+
+.ct2-left {
+  width: 656px;
+  height: 216px;
+  float: left;
+}
+
+.ct2-right {
+  width: 348px;
+  height: 214px;
+  float: left;
+  margin-left: 10px;
+}
+
+.ct2-right img {
+  width: 348px;
+  height: 214px;
+}
+
+.-jack {
+  width: 606px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 16px;
+  color: #00497b;
+}
+
+.-riqi {
+  width: 42px;
+  height: 20px;
+
+  float: right;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #c9c9c9;
+}
+
+.-item {
+  width: 604px;
+  height: 26px;
+  margin-top: 6px;
+  line-height: 26px;
+  color: #808080;
+  font-size: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.153);
+}
+
+.-item :hover {
+  color: darkorange;
+}
+
+.-riqi2 {
+  width: 67px;
+  height: 15px;
+  float: right;
+  margin-top: 6px;
+  color: #c9c9c9;
+  line-height: 15px;
+  font-size: 12px;
+}
+
+.sy-bottom {
+  width: 1024px;
+  height: 431px;
+  margin: 0 auto;
+}
+
+.-back {
+  width: 248px;
+  height: 431px;
+  float: left;
+  margin-left: 6px;
+}
+
+.-let {
+  width: 228px;
+  height: 228px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.-let img {
+  width: 228px;
+  height: 228px;
+}
+
+.-let img:hover {
+  transform: scale(1.4);
+  transition: all 1s;
+}
+
+.-go {
+  width: 228px;
+  height: 24px;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #00497b;
+  font-size: 16px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.-go a {
+  color: #00497b;
+}
+
+.-over {
+  width: 228px;
+  height: 128px;
+  margin: 0 auto;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #3e3e3e;
+  line-height: 1.5em;
+}
+
+.-back2 {
+  width: 248px;
+  height: 431px;
+  float: left;
+  margin-left: 6px;
+}
+
+.-yuan {
+  width: 228px;
+  height: 228px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.-yuan img {
+  display: block;
+  width: 228px;
+  height: 228px;
+  border-radius: 50%;
+}
+
+.-yuan img:hover {
+  transform: scale(1.4);
+  transition: all 1s;
+}
+
+/* 首页内容结束 */
+/* 最爱克罗地亚内容开始 */
+
+/* 最爱克罗地亚内容结束 */

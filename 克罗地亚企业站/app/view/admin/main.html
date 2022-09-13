@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>首页</title>
+    <link rel="stylesheet" href="/public/admin/layui-v2.6.8/layui/css/layui.css">
+    <link rel="stylesheet" href="/public/admin/css/main.css">
+    <link rel="stylesheet" href="/public/admin/layui-v2.6.8/layui-theme-custom.css">
+    <link rel="stylesheet" href="/public/admin/layui-theme-custom.css">
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo layui-hide-xs layui-bg-black">克罗地亚旅行社后台管理</div>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                    <a href="javascript:;">
+                        
+                        <%= username%>
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" id="change-pass">修改密码</a></dd>
+                        <dd><a href="/admin/loginout">退出登录</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="nav">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;" link="/admin/info">网站信息</a>
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;" link="/admin/wheel">轮播管理</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">最爱克罗地亚页面管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" link="/admin/add-croatia">添加</a></dd>
+                            <dd><a href="javascript:;" link="/admin/croatia">列表</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;" link="/admin/aroundes">周边巴尔干国家管理</a>
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;" link="/admin/tour">行程介绍</a>
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;" link="/admin/news">资讯管理</a>
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;" link="/admin/about">关于我们</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">分类管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" link="/admin/category">轮播分类</a></dd>
+                            <dd><a href="javascript:;" link="/admin/cateCroatia">最爱克罗地亚分类</a></dd>
+                            <dd><a href="javascript:;" link="/admin/cateArounds">巴尔干国家分类</a></dd>
+                            <dd><a href="javascript:;" link="/admin/cateTour">行程介绍分类</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div class="box">
+                <div class="layui-tab" lay-allowClose="true" lay-filter="tab">
+                    <ul class="layui-tab-title">
+                        <!-- <li class="layui-this">网站设置</li>
+                        <li>权限分配</li> -->
+                    </ul>
+                    <div class="layui-tab-content">
+                        <!-- <div class="layui-tab-item layui-show">1</div>
+                        <div class="layui-tab-item">2</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+    <script src="/public/admin/layui-v2.6.8/layui/layui.js"></script>
+    <script>
+        layui.use(['element', 'layer', 'util'], function () {
+            var element = layui.element
+                , layer = layui.layer
+                , util = layui.util
+                , $ = layui.$
+                , form = layui.form;
+            var obj = {};
+            element.on('nav(nav)', function (data) {
+                // console.log(data);
+                var title = data.text();
+                var link = data.attr('link')
+                console.log(link);
+                var fn
+                if (link) {
+                    if (!obj[link]) {
+                        element.tabAdd('tab', {
+                            title: title
+                            , content: '<iframe src="' + link + '" frameborder="0"></iframe>'
+                            , id: link
+                        });
+                        obj[link] = true
+                        element.on('tabDelete(tab)', function (data) {
+                            var v = this.parentElement.getAttribute('lay-id');
+                            delete obj[v]
+                        });
+                    }
+                    element.tabChange('tab', link);
+                }
+                // console.log(obj);
+            });
+            //修改密码
+            var changePass = document.querySelector('#change-pass')
+            $('#pass-form').toggle(false)
+            // console.log(changePass);
+            changePass.onclick = function () {
+                //给表单赋值
+                form.val("pass-form", {
+                    "oldPass": ""       // "name": "value"
+                    , "newPass": ""
+                    , "renewPass": ""
+                });
+              fn= layer.open({
+                    type: 1,
+                    area: '350px',
+                    shade: false,
+                    title: '修改密码', //不显示标题
+                    content: $('#pass-form'), //捕获的元素，注意：最好该指定的元素要存放在body最外层，否则可能被其它的相对元素所影响
+                });
+            }
+            form.on("submit(pass)", function (data) {
+                if (data.field.newPass != data.field.renewPass) {
+                    layer.msg('两次新密码输入不一致')
+                }else{
+                    $.ajax({
+                        url: '/admin/main',
+                        type: 'POST',
+                        data: data.field,
+                        success: function (res) {
+                            if (res.code == 200) {
+                                layer.close(fn)
+                                layer.msg(res.msg)
+                                setTimeout(() => {
+                                    location.href='/admin/login'
+                                }, 1000);
+                            }
+                           
+                        },
+                        error: function () {
+                            layer.msg(res.msg)
+                        }
+                    })
+                }
+                return false;
+            })
+
+        });
+    </script>
+</body>
+<form class="layui-form" action="" id="pass-form" style="padding: 50px 30px 30px 0;">
+    <div class="layui-form-item">
+        <label class="layui-form-label">原密码</label>
+        <div class="layui-input-inline">
+            <input type="password" name="oldPass" required lay-verify="required" placeholder="请输入原密码"
+                class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">新密码</label>
+        <div class="layui-input-inline">
+            <input type="password" name="newPass" required lay-verify="required" placeholder="请输入新密码"
+                class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">确认新密码</label>
+        <div class="layui-input-inline">
+            <input type="password" name="renewPass" required lay-verify="required" placeholder="请再次输入新密码"
+                class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="pass">立即提交</button>
+        </div>
+    </div>
+</form>
+
+
+</html>

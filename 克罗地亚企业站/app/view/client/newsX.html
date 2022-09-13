@@ -1,0 +1,28 @@
+<%-include head.html%>
+    <link rel="stylesheet" href="/public/client/css/detail.css">
+    <!-- 资讯详情 -->
+    <div class="bigg">
+        <div class="zixun">
+            <div class="zixun-top-box">
+                <div class="zixun-top-left"></div>
+                <div class="zixun-top-middle">
+                    <span>资讯</span>
+                    <span class="title">News&Info</span>
+                </div>
+                <div class="zixun-top-right"></div>
+            </div>
+            
+            <div class="title-1">
+                <a href=""><%=newsX.title%></a>
+            </div>
+            <%-newsX.content%>
+           
+            <div class="butn">
+                <a href="/news"><button>返回列表</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 资讯详情结束 -->
+
+    <%-include foot.html%>

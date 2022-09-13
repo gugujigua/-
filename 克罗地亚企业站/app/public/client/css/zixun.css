@@ -1,0 +1,228 @@
+/* 资讯页面开始 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.zixun-box {
+  width: 1024px;
+  height: auto;
+  /* background-color: red; */
+  margin: auto;
+}
+
+.zixun-top-box {
+  width: 1024px;
+  height: 48px;
+  /* background-color: green; */
+  margin: auto;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+
+.zixun-top-left {
+  width: 328px;
+  height: 30px;
+  border-bottom: 3px solid rgb(62, 62, 62);
+  padding: 0px 5px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.zixun-top-middle {
+  width: 318px;
+  height: 48px;
+  /* background-color:blue; */
+  text-align: center;
+  float: left;
+}
+
+.zixun-top-box span {
+  height: 48px;
+  font-size: 36px;
+  color: #f0443A;
+}
+
+.zixun-top-box .title {
+  font-size: 18px;
+  height: 20px;
+  color: #A9A9A9;
+}
+
+.zixun-top-right {
+  width: 328px;
+  height: 30px;
+  border-bottom: 3px solid rgb(62, 62, 62);
+  padding: 0px 5px;
+  box-sizing: border-box;
+  float: right;
+}
+
+/* 动态列表开始 */
+.zixun-box ul {
+  width: 1024px;
+  /* height: 910px; */
+  /* background-color: green; */
+  margin: auto;
+  padding: 34px 0px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.zixun-box ul:nth-child(1) {
+  display: block;
+}
+
+.zixun-box ul li {
+  width: 1024px;
+  height: 215.8px;
+  /* background-color: aqua; */
+  margin-bottom: 5px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(62, 62, 62);
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.zixun-box ul li:last-child {
+  border-bottom: none;
+  padding: 0;
+}
+
+.zixun-box ul li:hover a {
+  color: #f0443A;
+}
+
+.zixun-list {
+  width: 1024px;
+  height: 154px;
+  /* background-color: blue; */
+}
+
+.zixun-list-left {
+  width: 225px;
+  height: 150px;
+  float: left;
+}
+
+.zixun-list-left img {
+  width: 225px;
+}
+
+.zixun-list-right {
+  width: 722.05px;
+  height: 154px;
+  /* background-color: blueviolet; */
+  padding-right: 5px;
+  box-sizing: border-box;
+  float: right;
+}
+
+.zixun-right-title {
+  color: #373a41;
+  font-size: 24px;
+}
+
+.date {
+  color: rgb(73, 78, 86);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.zixun-list-right p {
+  color: #494e56;
+  font-size: 13px;
+}
+
+.zixun-title2 {
+  width: 1024px;
+  height: 61px;
+  /* background-color: black; */
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.zixun-right-title2 {
+  color: #f0443A;
+  font-size: 16px;
+  line-height: 61px;
+  float: right;
+}
+
+/* 动态列表结束 */
+/* 点击列表开始 */
+.zixun-click {
+  width: 1024px;
+  height: 21.8px;
+  /* background-color: blue; */
+  padding-bottom: 30px;
+  margin: auto;
+}
+
+
+
+.zixun-two {
+  /* width: 56px; */
+  height: 20px;
+  border: 1px solid #333;
+  color: #595959;
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+  padding: 2px 6px;
+  box-sizing: border-box;
+  /* display: block; */
+  /* display: none; */
+  margin-left: 10px;
+}
+
+
+
+
+
+.zixun-one {
+  /* width: 22px; */
+  height: 20px;
+  border: 1px solid #333;
+  color: #595959;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 2px 6px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+
+.active {
+  /* width: 22px; */
+  height: 20px;
+  background-color: #595959;
+  border: 1px solid #333;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  padding: 2px 6px;
+  box-sizing: border-box;
+}
+
+.zixun-three {
+  /* width: 56px; */
+  height: 20px;
+  border: 1px solid #333;
+  color: #595959;
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+  padding: 2px 6px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  /* display: block; */
+}
+
+
+
+/* 点击列表结束 */
+/* 资讯页面结束 */

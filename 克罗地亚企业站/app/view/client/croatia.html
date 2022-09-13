@@ -1,0 +1,85 @@
+<%-include header.html%>
+    <link rel="stylesheet" href="/public/client/css/second.css">
+    <!-- 最爱克罗地亚内容开始 -->
+    <div class="-tp">
+        <div class="-tpzuo"></div>
+        <div class="-center">
+            <div class="ce-1">克罗地亚最热景点</div>
+            <div class="ce-2">Most Visited Destinations</div>
+        </div>
+        <div class="-tpyou"></div>
+    </div>
+
+    <div class="sy-bottom">
+        <%for(var i in croatia){%>
+            <%if(i==1){%>
+                <div class="-back2">
+                    <div class="-yuan"><a href="/croatia/<%=croatia[i].id%>"><img src="<%=croatia[i].image%>" alt="<%=croatia[i].title%>"></a>
+                    </div>
+                    <div class="-go"><a href="">普利特维采湖</a></div>
+                    <div class="-over">
+                        <%=croatia[i].description%>
+                    </div>
+                </div>
+                <%}else{%>
+                    <div class="-back">
+                        <div class="-let"><a href="/croatia/<%=croatia[i].id%>"><img src="<%=croatia[i].image%>" alt="<%=croatia[i].title%>"></a>
+                        </div>
+                        <div class="-go"><a href="">
+                                <%=croatia[i].title%>
+                            </a></div>
+                        <div class="-over">
+                            <%=croatia[i].description%>
+                        </div>
+                    </div>
+                    <%}%>
+                        <%}%>
+    </div>
+    <!-- 地图部分开始 -->
+    <div class="big-box">
+        <div class="-font">克罗地亚介绍</div>
+        <div class="-font1">About Croatia</div>
+        <div class="-smallbox">
+            克罗地亚地处中欧、东南欧以及地中海之交的欧洲十字路口位置。它是巴尔干国家，地处巴尔干半岛西部。克罗地亚和意大利以亚德里亚海隔海相望，西邻斯洛文尼亚，北接匈牙利，东面是塞尔维亚和波黑等国。克罗地亚曾是前南斯拉夫社会主义联邦共和国加盟国之一。1991年独立，脱离了前南斯拉夫。2013年7月1日，克罗地亚加入欧盟。
+
+            <p>克罗地亚是典型的地中海国家，拥有狭长曲折的亚德里亚海海岸线和上千座岛屿，是名副其实的地中海千岛之国。其国土面积为56,538平方千米，海洋面积为31,900平方千米。克罗地亚全国人口超过400万。克罗地亚国土面积虽小，但地貌多样，自然环境优美，且历史文化丰富。因其历史上曾先后处于古罗马帝国和奥匈帝国的版图内，因此留下了众多的历史遗迹和建筑。位于亚德里亚海的科尔丘拉岛，据说是著名旅行家马可波罗的出生地。普利特维采湖国家公园（俗称十六湖）是克罗地亚最大的国家公园，被中国游客称之为“欧洲的九寨沟”。斯普利特的古罗马遗迹戴克里先宫殿、有“亚德里亚海之珠”美誉的海滨古城杜布罗夫尼克，都无疑是克罗地亚数不胜数的著名景点的列举。
+            </p>
+        </div>
+    </div>
+    <!-- 地图部分结束 -->
+    <div class="-tp">
+        <div class="-tpzuo"></div>
+        <div class="-center">
+            <div class="ce-1">精选陆地景点</div>
+            <div class="ce-2">Most Visited Destinations</div>
+        </div>
+        <div class="-tpyou"></div>
+    </div>
+
+    <div class="-bush">
+        <%for(var i in groud){%>
+        <div class="-mash"><a href="/croatia/<%=groud[i].id%>"><img src="<%=groud[i].image%>" alt="<%=groud[i].title%>"></a>
+            <div class="-tupian15"><%=groud[i].title%></div>
+        </div>
+        <%}%>
+    </div>
+
+    <div class="-tp">
+        <div class="-tpzuo"></div>
+        <div class="-center">
+            <div class="ce-1">岛屿和半岛</div>
+            <div class="ce-2">Islands and Peninsulas</div>
+        </div>
+        <div class="-tpyou"></div>
+    </div>
+
+    <div class="-diduan">
+        <%for(var i in land){%>
+        <div class="-mash"><a href="/croatia/<%=land[i].id%>"><img src="<%=land[i].image%>" alt="<%=land[i].title%>"></a>
+            <div class="-tupian15"><%=land[i].title%></div>
+        </div>
+        <%}%>
+    </div>
+    <!-- 最爱克罗地亚内容结束 -->
+
+    <%-include footer.html%>

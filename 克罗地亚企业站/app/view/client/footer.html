@@ -1,0 +1,106 @@
+<footer>
+    <div class="footmid">
+        <ul>
+            <li>
+                <span>公司信息</span>
+                <div class="mid-bot">
+                    <span>
+                        <%=info.info_one%><br>
+                    </span>
+                    <span>
+                        <%=info.info_two%><br>
+                    </span>
+                    <span>
+                        <%=info.info_three%><br>
+                    </span>
+                    <span>
+                        <%=info.info_four%>
+                    </span>
+                </div>
+            </li>
+            <li>
+                <span>办公地址</span>
+                <div class="mid-bot">
+                    <span>
+                        <%=info.address_one%><br>
+                    </span>
+                    <span>
+                        <%=info.address_two%><br>
+                    </span>
+                    <span>
+                        <%=info.address_three%><br>
+                    </span>
+                    <span>
+                        <%=info.address_four%>
+                    </span>
+                </div>
+            </li>
+            <li>
+                <span>联系方式</span>
+                <div class="mid-bot">
+                    <span>Tel：<%=info.Tel%><br></span>
+                    <span>E-mail：<%=info.email%><br></span>
+                    <span>QQ/微信：<%=info.qq%><br></span>
+                    <span>
+                        <%=info.www%>
+                    </span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="bottom">版权所有 <%-info.copyright%>
+        </div>
+
+    </div>
+
+</footer>
+<script src="/public/client/js/swiper-bundle.min.js"></script>
+<script src="/public/client/js/swiper.animate1.0.3.min.js"></script>
+<script src="/public/client/js/public.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper', {
+        //   direction: 'vertical', // 垂直切换选项
+        loop: true, // 循环模式选项
+        autoplay: true,
+        effect: 'fade',
+        // 如果需要分页器
+        // pagination: {
+        //     el: '.swiper-pagination',
+        // },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        speed: 300,
+        // mySwiper.el.onmouseover = function () {
+        //     mySwiper.navigation.$nextEl.removeClass('hide');
+        //     mySwiper.navigation.$prevEl.removeClass('hide');
+        // },
+        //鼠标覆盖停止自动切换与隐藏前进后退按钮
+        // mySwiper.el.onmouseout = function () {
+        //     mySwiper.navigation.$nextEl.addClass('hide');
+        //     mySwiper.navigation.$prevEl.addClass('hide');
+        // },
+
+        // 如果需要滚动条
+        // scrollbar: {
+        //     el: '.swiper-scrollbar',
+        // },
+        on: {
+            init: function () {
+                swiperAnimateCache(this); //隐藏动画元素 
+                swiperAnimate(this); //初始化完成开始动画
+            },
+            slideChangeTransitionEnd: function () {
+                swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+            }
+        }
+
+    })        
+</script>
+</body>
+
+</html>

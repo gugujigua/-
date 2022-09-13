@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/admin/layui-v2.6.8/layui/css/layui.css">
+    <link rel="stylesheet" href="/public/admin/wangEditor/style.css">
+    <link rel="stylesheet" href="/public/admin/css/common.css">
+    <link rel="stylesheet" href="/public/admin/css/add-wheel.css">
+    <link rel="stylesheet" href="/public/admin/layui-theme-custom.css">
+</head>
+
+<body>
+    <div class="layui-panel">
+        <h2>添加</h2>
+        <a href="/admin/aroundes" class="layui-btn" style="margin:10px">返回</a>
+        <div class="from-box">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">图片标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="headline" placeholder="请输入标题" class="layui-input">
+                    </div>
+                </div>
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">图片</label>
+                        <div class="layui-input-block">
+                            <div class="layui-upload">
+                                <button type="button" class="layui-btn" id="upload">
+                                    <i class="layui-icon">&#xe67c;</i>上传图片
+                                </button>
+                                <div class="image-box">
+                                    <input type="file" id="upload-file" required>
+                                    <img src="" id="upload-image">
+                                    <input type="hidden" value="" id="upload-input" name="image">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">类别</label>
+                        <div class="layui-input-block">
+                            <select name="cat_id" lay-verify="required">
+                                <option value=""></option>
+                                <%for(var i in category){%>
+                                    <option value="<%=category[i].title%>">
+                                        <%=category[i].title%>
+                                    </option>
+                                    <%}%>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">内容</label>
+                        <div class="layui-input-block">
+                            <div style="border: 1px solid #ccc;">
+                                <div id="toolbar-container" style="border-bottom: 1px solid #ccc;"></div>
+                                <div id="editor-container" style="height: 500px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="add-wheelSub">立即提交</button>
+                        </div>
+                    </div>
+                </form>
+                <script src="/public/admin/layui-v2.6.8/layui/layui.js"></script>
+                <script src="/public/admin/wangEditor/index.js"></script>
+                <script>
+                    layui.use('form', function () {
+                        var form = layui.form;
+                        var $ = layui.$
+                        var upload = layui.upload
+                        //上传
+                        var uploadInput = document.querySelector('#upload-input')
+                        var uploadImage = document.querySelector('#upload-image')
+                        form.on('submit(add-wheelSub)', function (data) {
+                            delete data.field.file;
+                            data.field.content = editor.getHtml();
+                            $.ajax({
+                                url: '/admin/add-aroundes',
+                                type: 'POST',
+                                data: data.field,
+                                success: function (res) {
+                                    if (res.code == 200) {
+                                        layer.msg(res.msg)
+                                        setTimeout(() => {
+                                            location.href = '/admin/aroundes'
+                                        }, 2000);
+                                    }
+                                },
+                                error: function () {
+                                    layer.msg('添加出错啦！请稍后重试')
+                                }
+                            })
+                            return false;
+                        });
+                        upload.render({
+                            elem: '#upload' //绑定元素
+                            , url: '/admin/upload' //上传接口
+                            , done: function (res) {
+                                //上传完毕回调
+                                if (res.code == 200) {
+                                    uploadInput.value = res.data
+                                    uploadImage.src = res.data
+                                    layer.msg(res.msg)
+                                } else {
+                                    layer.msg(res.msg)
+                                }
+                            }
+                            , error: function () {
+                                //请求异常回调
+                            }
+                        });
+                        var editorConfig = {
+                            MENU_CONF: {
+                                uploadImage: {
+                                    server: '/admin/upload',
+                                    maxFileSize: 1 * 1024 * 1024,
+                                    allowedFileTypes: ['image/*'],
+                                    //自定义插入图片
+                                    customInsert(res, insertFn) {
+                                        // res 即服务端的返回结果
+                                        // 从 res 中找到 url alt href ，然后插图图片
+                                        insertFn(res.data)
+                                    },
+                                }
+                            }
+                        }
+
+                        var toolbarConfig = {};
+                        // 创建编辑器
+                        const editor = wangEditor.createEditor({
+                            selector: '#editor-container',
+                            config: editorConfig,
+                            mode: 'default' // 或 'simple' 参考下文
+                        })
+                        // 创建工具栏
+                        const toolbar = wangEditor.createToolbar({
+                            editor,
+                            selector: '#toolbar-container',
+                            config: toolbarConfig,
+                            mode: 'default' // 或 'simple' 参考下文
+                        })
+                    });
+
+
+                </script>
+        </div>
+    </div>
+</body>
+
+</html>

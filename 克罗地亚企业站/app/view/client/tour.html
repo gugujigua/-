@@ -1,0 +1,35 @@
+<%-include head.html%>
+    <link rel="stylesheet" href="/public/client/css/tour.css">
+    <!--行程介绍开始 -->
+    <main>
+        <div class="main-title">
+            <div class="hr-left"></div>
+            <div class="title">
+                <span class="title-cn">行程介绍</span>
+                <span class="title-en">Programs</span>
+            </div>
+            <div class="hr-right"></div>
+        </div>
+        <div class="jieshao">
+            <p>做为资深的线路专家，我们不仅为您提供最能挖掘旅行目的地乐趣的行程，同时也能根据您的需要为您做贴身的旅程定制。</p>
+        </div>
+        <div class="gonglue">
+            <%for(var i in tour){%>
+                <a href="./tour/<%=tour[i].id%>">
+                    <div class="gonglue-item1">
+                        <a href="./tour/<%=tour[i].id%>"><img src="<%=tour[i].image%>" alt="<%=tour[i].title%>">
+                            <span><%=tour[i].title_one%></span><br>
+                            <strong><%=tour[i].title_two%></strong>
+                        </a>
+                    </div>
+                </a>
+                <%}%>
+        </div>
+        <div class="jieshao">
+            <p>更多行程案例将继续补充。</p>
+        </div>
+
+    </main>
+    <!--行程介绍结束 -->
+
+    <%-include foot.html%>

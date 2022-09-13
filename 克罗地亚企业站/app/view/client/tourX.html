@@ -1,0 +1,15 @@
+<%- include headerX.html%>
+<link rel="stylesheet" href="/public/client/css/tourX.css">
+    <main>
+        
+        <div class="main-title">
+            <span><%=tourX.title%></span>
+            <span class="title-en" style="clear: both;"><%=tourX.en_title%></span>
+        </div>
+        <div class="main-jieshao">
+            <div style="width: 1024px; height: 24px"></div>
+          <%-tourX.content%>
+        </div>
+       
+    </main>
+   <%-include footer.html%>

@@ -1,0 +1,79 @@
+<%-include head.html%>
+    <link rel="stylesheet" href="/public/client/css/zixun.css">
+    <!-- 资讯页面开始 -->
+    <div class="zixun-box">
+        <div class="zixun-top-box">
+            <div class="zixun-top-left"></div>
+            <div class="zixun-top-middle">
+                <span>资讯</span>
+                <span class="title">News&Info</span>
+            </div>
+            <div class="zixun-top-right"></div>
+        </div>
+        <!-- 动态列表1开始 -->
+        <div class="zixun-big">
+            <ul>
+                <%for(var i in news){%>
+                    <a href="/news/<%=news[i].id%>">
+                        <li>
+                            <div class="zixun-list">
+                                <div class="zixun-list-left">
+                                    <img src="<%=news[i].image%>" alt="<%=news[i].title%>">
+                                </div>
+                                <div class="zixun-list-right">
+                                    <a href="/news/<%=news[i].id%>" class="zixun-right-title">
+                                        <%=news[i].title%>
+                                    </a>
+                                    <div class="date">发布日期：<%=news[i].create_time%>
+                                    </div>
+                                    <p>
+                                        <%=news[i].description%>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="zixun-title2">
+                                <a href="/news/<%=news[i].id%>" class="zixun-right-title2">阅读正文</a>
+                            </div>
+                        </li>
+                    </a>
+                    <%}%>
+            </ul>
+        </div>
+    </div>
+    <div class="zixun-click">
+        <ol>
+            <li>
+                <%if(page==1){%>
+                    <a class="zixun-two" style="opacity:0" href="/news?page=1">第一页</a>
+                    <a class="zixun-two" style="opacity:0" href="/news?page=<%=page-1<=1?1:page-1%>">上一页</a>
+                    <%}else{%>
+                        <a class="zixun-two" href="/news?page=1">第一页</a>
+                        <a class="zixun-two" href="/news?page=<%=page-1<=1?1:page-1%>">上一页</a>
+                        <%}%>
+
+                            <%for(var j=1;j<=pages;j++){%>
+                                <%if(page==j){%>
+                                    <a class="zixun-one active" href="/news?page=<%=j%>">
+                                        <%=j%>
+                                    </a>
+                                    <%}else{%>
+                                        <a class="zixun-one " href="/news?page=<%=j%>">
+                                            <%=j%>
+                                        </a>
+                                        <%}%>
+                                            <%}%>
+                                                <%if(page==pages){%>
+                                                    <a class="zixun-three" style="opacity:0"
+                                                        href="/news?page=<%=page+1>=pages?pages:page+1%>">下一页</a>
+                                                    <a class="zixun-three" style="opacity:0"
+                                                        href="/news?page=<%=pages%>">最后一页</a>
+                                                    <%}else{%>
+                                                        <a class="zixun-three"
+                                                            href="/news?page=<%=page*1+1>=pages?pages:page*1+1%>">下一页</a>
+                                                        <a class="zixun-three" href="/news?page=<%=pages%>">最后一页</a>
+                                                        <%}%>
+            </li>
+        </ol>
+    </div>
+
+    <%-include foot.html%>

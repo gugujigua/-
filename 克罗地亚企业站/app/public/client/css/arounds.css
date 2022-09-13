@@ -1,0 +1,317 @@
+/* 顶部 */
+.swiper {
+  width: 100%;
+  height: 300px;
+  /* background-color: red; */
+}
+
+header {
+  width: 100%;
+  height: 98px;
+  /* background-color: yellow; */
+}
+
+
+
+.wf {
+  width: 1024px;
+  height: 98px;
+  margin: 0 auto;
+  /* background-color: red; */
+  display: flex;
+}
+
+.wf-td {
+  width: 339.17px;
+  height: 98px;
+  /* background-color: green; */
+  display: flex;
+}
+
+.nav {
+  width: 684.83px;
+  /* background-color: gold; */
+  height: 98px;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav ul li {
+  height: 98px;
+  /* background-color: red; */
+  width: auto;
+  font: 14px;
+  word-spacing: normal;
+  color: #8d9095;
+  font-family: "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font: normal 600 15px / 23px "微软雅黑", Helvetica, Arial, Verdana, sans-serif;
+  line-height: 98px;
+}
+
+
+.wf-td img {
+  width: 277px;
+  height: 52px;
+  margin: 20px auto;
+}
+
+/* 顶部+轮播图结束 */
+footer {
+  width: 100%;
+  height: 224px;
+  background: #00497b none repeat center top;
+
+}
+
+.footmid {
+  width: 1024px;
+  height: 199px;
+  margin: 0 auto;
+}
+
+.mid {
+  width: 1024px;
+  height: 161px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fot {
+  height: 161px;
+  width: 311px;
+
+}
+
+.bottom {
+  width: 1024px;
+  height: 28px;
+
+  text-align: center;
+  line-height: 28px;
+}
+
+.fot li {
+  height: 32px;
+}
+
+.-gaikuo {
+  background-color: #f2f2f2;
+  width: 974px;
+  height: 185.556px;
+  margin: 33px auto 0;
+}
+
+.-gaikuo1 {
+  float: left;
+  margin: 35px 0 31px 44px;
+  width: 883px;
+  height: 119.566px;
+}
+
+.-gaikuoshang {
+  width: 883px;
+  height: 51.556px;
+  margin-bottom: 20.1px;
+}
+
+.-gaikuodi {
+  padding: 5px 0;
+  width: 883px;
+  height: 48px;
+  font-size: 14px;
+  color: #696969;
+}
+
+.-gaikuosha {
+  width: 360.01px;
+  height: 32px;
+  margin: 0 auto;
+
+}
+
+.ba {
+  float: left;
+  font-size: 24px;
+  color: #696969;
+  line-height: 32px;
+}
+
+.yin {
+  float: right;
+  color: #d3d3d3;
+  font-size: 24px;
+  line-height: 32px;
+  ;
+}
+
+.-zhong {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #696969;
+}
+
+.-si {
+  margin: 40px auto 0;
+  padding: 0 5px;
+  width: 974px;
+  height: 122.667px;
+
+}
+
+.-s {
+  width: 974px;
+  height: 28.44px;
+
+}
+
+.-si1 {
+  float: left;
+  margin-right: 10px;
+  color: #666;
+  font-weight: 700;
+  font-family: 微软雅黑, Helvetica, Arial, Verdana, sans-serif;
+}
+
+.-si2 {
+  float: left;
+  font-size: 22px;
+  color: #d3d3dd;
+}
+
+-si3 {
+  float: left;
+  font-size: 14px;
+  color: #3e3e3e;
+  font-family: 微软雅黑;
+}
+
+.-situ {
+  margin: 35px auto 0;
+  width: 974px;
+  height: 365.69px;
+}
+
+.-sleif {
+  float: left;
+  height: 365.69px;
+  width: 656px;
+}
+
+.-situleft {
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 318px;
+  height: 178.07px;
+  position: relative;
+  overflow: hidden;
+}
+
+.-situleft img {
+  width: 318px;
+  height: 178.07px;
+}
+.-situleft img:hover{
+  transform: scale(1.3);
+  transition: all 1s;
+}
+
+.-touming {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 30.8px;
+  line-height: 30.8px;
+  color: #ffff;
+  text-align: center;
+}
+
+.-situright {
+  float: right;
+  width: 318px;
+  height: 365.69px;
+  position: relative;
+  overflow: hidden;
+}
+
+.-situright img {
+  width: 318px;
+  height: 365.69px;
+}
+.-situright img:hover{
+  transform: scale(1.3);
+  transition: all 1s;
+}
+
+.-sai {
+  margin: 60px auto 0;
+  width: 974px;
+}
+.-saitu{
+  width: 984px;
+  height: 318px;
+  margin: 35px auto 0;
+}
+.-saitu1{
+  float: left;
+  width: 318px;
+  height: 318px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.-saitu1 img{
+  width: 318px;
+  height: 318px;
+}
+.-saitu1 img:hover{
+  transform: scale(1.3);
+  transition: all 1s;
+}
+.-saitu2{
+  float: left;
+  width: 646px;
+  height: 318px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.-saitu2 img{
+  width: 646px;
+  height: 318px;
+}
+.-saitu2 img:hover{
+  transform: scale(1.3);
+  transition: all 1s;
+}
+.-saituzui{
+  width: 984px;
+ height: 1004px;
+ margin: 0 auto;
+}
+.-saitu3{
+  float: left;
+  width: 984px;
+  height: 318px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.-saitu3 img{
+  width: 984px;
+  height: 318px;
+}
+.-saitu3 img:hover{
+  transform: scale(1.3);
+  transition: all 1s;
+}
